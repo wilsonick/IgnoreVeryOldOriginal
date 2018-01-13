@@ -14,6 +14,6 @@ void main()
     {
       printf("Hello");
       }*/
-  double yoyo = 10; 
+  double yoyo = 8; 
   printf("%d\n",fibo());
 }
