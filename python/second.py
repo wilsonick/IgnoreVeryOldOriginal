@@ -1,6 +1,10 @@
 ############## IMPORT PLAYING ##############
 import math
 #import pylab
+from math import pi
+
+print(pi)
+print(math.pi)
 
 
 ############## GLOBAL PLAYING ###############
@@ -26,6 +30,24 @@ def func():
 
 def nothing():
         pass
+
+def nats(n):
+        return range(1,n+1)
+
+def bubble(nums):   # Bubble sort algorithm
+        for i in range(0 , len(nums) - 1 ):
+                for j in range(0 , len(nums) - 1 ):
+                        # print(j)
+                        if nums[j] > nums[j + 1]:   # IF ONE IS BIGGER THAN THE OTHER.....
+                                numstemp1 = nums[j]
+                                numstemp2 = nums[j+1]     # SWAP THEM AROUND! 
+                                nums[j] = numstemp2
+                                nums[j+1] = numstemp1
+        return nums
+
+print( bubble( [10,12,100,6,5,4,7] ) )
+
+print( bubble( [100,99,67,4,5,50,38,5849,0] ) )
 
 
 ############### FLOW CONTROL PLAYING #############
@@ -68,6 +90,32 @@ else:
         if (9 == 11):
                 print('elif sucks')
 
+
+case = 6
+cases = 3
+if case == 1:
+        print('case1')
+elif cases == 2:
+        print('case2')
+elif case == 3:
+        print('case3')
+elif case == 4:
+        print('case4')
+elif case == 5:
+        print('case5')
+
+
+
+'''
+#### ATTEMPT TO USE DICTIONARY AS SWITCH #########
+temp = 1
+def casey(temp):
+        return {
+                1: print('case1'),
+                2: print('case2'),
+                }[temp]
+'''
+
 ########### WHILE ##########
         
 while 1==2:
@@ -78,7 +126,42 @@ while (i < 5):
         i += 1
         print('Yay')
 
-        
+while False:
+        print('NEVER')
+
+############ FOR #############
+
+for i in [1,3,7]:
+        print('hi')
+
+for i in [2,1]:
+        print(i-1)
+
+for i in 'Python':
+        print(i)
+
+for i in 'Python':
+        print(10*i)
+
+
+pi = 3.1415926535897932384626433835729
+
+print(pi)
+
+for i in str(pi):
+        print(pi)
+
+zucks = 'MarkPris '
+for i in range(3):
+        zucks = 2 * zucks
+
+print(zucks[34:46])
+
+print(zucks[0 : math.floor( len(zucks)/2 ) ] )
+
+print('%%%%%%%%%%%%%%%%SPACES%%%%%%%%%%%%')
+
+print(zucks)
 
 ############# STRING PLAYING ############
 print('Py' 'thon')
@@ -98,23 +181,38 @@ if (name[3:5] == 'ba'):
 
 
 ########### LIST PLAYING ##############
-'''
-initlist = [1,2,3]
-for i in len(initlist):
+
+initlist = list(range(1,20))
+for i in range(len(initlist)):
         initlist[i] = (i**3)
 print(initlist)
-'''
 
-natural = [1,2,3,4,5]
+natural = list(range(1,15))
 print([i**2 for i in natural])
+
+print(list(range(1,51)))
 
 
 for i in [1,2]:
         print('FOR LOOP')
 
 
+print(natural)
 
-'''        
+natural.append(4389)
+natural.append(4379789)
+
+print(natural)
+
+del natural[len(natural) - 1]       ############# DEL! #############
+
+print(natural)
+
+del natural[4:]
+
+print(natural)
+
+'''        ### PRINT MULTIPLICATION TABLES ###
 listy = [[0 for i in range(13)] for j in range(13) ]
 
 for i in range(13):
