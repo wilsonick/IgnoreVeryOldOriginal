@@ -1,9 +1,66 @@
 import math
 
 
+################# NOT PLAYING ###############
+propa = False
+propb = False
+
+if not propa:
+        print('hello')
+
+if not ( propa or propb  ):
+        print('demorgan11',True)
+else:
+        print('demorgan12',False)
+
+        
+if ( not propa ) and ( not propb ):
+        print('demorgan21',True)
+else:
+        print('demorgan22',False)
+
+
+propc = True
+
+print('Next two negation laws')
+
+if propc or not propc:
+        print(True)
+else:
+        print(False)
+
+
+if propc and not propc:
+        print(True)
+else:
+        print(False)
+
+
+############### NEGATE HEAPS ##############
+        
+def manynegs(prop,num):
+        for i in range(num):
+                prop = not prop
+        return prop
+
+
+print('Multiple negations')
+
+print(manynegs(True, 101))
+
+
+################ NUMBER 8 EQUIVALENCE ON WIKIPEDIA ################
+
+
+
+
+
 #################  DATA TYPE PLAYING  ################
-numberint = 535453
-numberlong = 
+print('----------------------------------------')
+
+number = 10
+numberint = 128
+numberlong = 3685974589764576458976457
 numberfloat = 3.1415926535897932384626433835729
 numbercomp = 5 + 4j
 
@@ -33,6 +90,10 @@ print('stri' is 'str')
 
 print(1 == 1)
 print(1 == 2)
+
+
+
+
 
 ############ IS EQUAL DIFFERENCE ################
 
