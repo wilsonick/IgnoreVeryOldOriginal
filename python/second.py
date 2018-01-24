@@ -1,10 +1,32 @@
 ############## IMPORT PLAYING ##############
-import math
-#import pylab
-from math import pi
+#import math
+from math import *
 
+#import cmath
+from cmath import *
+
+#from math import pi
+
+#import numbers
+#import pylab
+
+
+################## TESTING PACKAGE REWRITING AND PRIORITY ###################
+
+'''
 print(pi)
 print(math.pi)
+'''
+
+
+#print(exp(1j))   # Tell whether which package is loaded first and if they are overridden
+
+
+#print(math.sin(1))
+#print(cmath.sin(1))
+
+#print(sin(1j))
+#print(sin(1j))
 
 
 ############## GLOBAL PLAYING ###############
@@ -50,11 +72,49 @@ print( bubble( [10,12,100,6,5,4,7] ) )
 print( bubble( [100,99,67,4,5,50,38,5849,0] ) )
 
 
+################ DATA TYPE PLAYING ##############
+
+unit = 1j
+i = 1j
+comp1 = 3 + 5j
+comp2 = 7 + 2j
+comp3 = -6 - 8j
+
+print('--------------- COMPLEX START ------------')
+
+print(comp1*unit)
+print(comp1*i)
+print(comp1/comp2)
+print(comp2/comp1)
+
+print(comp1/1e-10)
+print(comp1/1j)
+
+print(abs(comp3))
+print(polar(exp(1j*pi)))
+print(rect(1,pi))
+
+print(comp3.real)
+print(comp2.imag)
+
+print(phase(1j))
+print(pi/2)
+
+print(exp(1j*pi) + 1)
+
+print(cos(1j*pi))
+
+#sin(
+
+
+
+print('--------------- COMPLEX END ------------')
+
 ############### FLOW CONTROL PLAYING #############
 
 ######## IF #######
 
-if ((10 - 7) == 3) or (1==2):
+if ((10 - 7) == 3) or (1 == 2):
         print('Wrong')
 
 if ( ( 6 * 8 ) == 48 ) and ( ( 5 * 12 ) == 60 ):
@@ -157,7 +217,7 @@ for i in range(3):
 
 print(zucks[34:46])
 
-print(zucks[0 : math.floor( len(zucks)/2 ) ] )
+print(zucks[0 : floor( len(zucks)/2 ) ] )
 
 print('%%%%%%%%%%%%%%%%SPACES%%%%%%%%%%%%')
 
