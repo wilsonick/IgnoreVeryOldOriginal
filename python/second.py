@@ -217,7 +217,7 @@ for i in range(3):
 
 print(zucks[34:46])
 
-print(zucks[0 : floor( len(zucks)/2 ) ] )
+print(zucks[0 : len(zucks)//2  ] )
 
 print('%%%%%%%%%%%%%%%%SPACES%%%%%%%%%%%%')
 
