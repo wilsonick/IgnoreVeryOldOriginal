@@ -169,16 +169,16 @@ numbersci = 97439e12
 
 string = 'Now is the time for 111 @@@ *&$(^$#*(#@&$(@#& 0123456789 '
 
-list = [1,'N','I','C',2]
-print(list*3)
+listy = [1,'N','I','C',2]
+print(listy*3)
 
 people = set(['Peter','Barbara','Sasha','Duncan'])
 natnum = set(range(200))
 
 print(natnum)
 
-tuple = (1,3,65,543)
-dict = {'Mon': 1, 'day': 2}
+tuples = (1,3,65,543)
+dicty = {'Mon': 1, 'day': 2}
 
 
 
@@ -188,11 +188,11 @@ dict = {'Mon': 1, 'day': 2}
 print('DIVISOR')
 
 def divis(n):
-        divlist = []
+        divl = []
         for i in range(1,n+1):
                 if (n%i == 0):
-                        divlist.append(i)
-        return divlist
+                        divl.append(i)
+        return divl
 
 
 print(divis(50))
@@ -201,36 +201,46 @@ print('---------------------- PRIME NUMBERS ------------------')
 
 
 def primes(n):
-        primeslist = []
+        primesl = []
         for i in range(1,n):
                 if ( divis(i) == [1,i] ):
                # if i % j != 0 and (i/j != 1 or i/j != i):       # If a multiple is found
                # if (i/j == 1) or (i/j == i) or (i/j == j):
-                        primeslist.append(i) # Add a prime
-        return primeslist
+                        primesl.append(i) # Add a prime
+        return primesl
 
 print(primes(30))
 
 print('COMBINED DIVISOR')
-
+'''
 def combprimes(n):
-        divislist = []
-        primeslist = []
-        composlist = []
-        for i in range(1,n+1):
-                if (n%i == 0):
-                        divislist.append(i)
+#        divisl = list(range(1,n))
+        divisl = [[] for _ in range(n)]
+        print(divisl)
+        primesl = []
+        composl = []
+        for i in range(1,4):
+                for j in range(1,4):
+                        if (n%divisl[i][j] == 0):
+                                divisl[i][i].append(divisl[i][i])
         #if ( (n/i == 1) or (n/i == i) ):
-        for i in divislist:
-                if i == 
-                        primeslist.append(i)
+        print(divisl)
+        
+        
+        for i in range(1,5):
+                #if ( ( divisl[i] == [1] ) or ( divisl[i] == [i] ) ):
+                if (  divisl[i] == [1,i]  ):
+                        primesl.append(i)
                 else:
-                        composlist.append(i)
-        return [primeslist,composlist]
+                        composl.append(i)
+        return [primesl,composl]
 
 print(combprimes(15))
-
 '''
+
+print('------------------ STOLEN CODE ------------')
+
+
 def is_prime(n):
         for i in range(2, int(math.sqrt(n)) + 1):
                 if n % i == 0:
@@ -239,14 +249,14 @@ def is_prime(n):
 
 print(is_prime(13))
 
-numbs = 100
+numbs = 30
 primal = []
 for i in range(numbs):
         if is_prime(i):
                 primal.append(i)
 
 print(primal)
-'''
+
 
 
 ################ IS PLAYING ####################
@@ -298,18 +308,18 @@ if number == number4:
 
 
 
-if list is list:
+if listy is listy:
         print('equal lists')
 
 
 
-if list is list.append(1):
+if listy is listy.append(1):
         print('the same')
 else:
         print('not the same')
 
-verity = list.append(4)
-if list is verity:
+verity = listy.append(4)
+if listy is verity:
         print('the same')
 else:
         print('not the same')
