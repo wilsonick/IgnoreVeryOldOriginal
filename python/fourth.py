@@ -86,6 +86,20 @@ print(numfloat + 2 / numint + numint2 - 43)
 
 
 
+print('----------------- BASIC CS PLAYING ----------------')
+
+abc = 1
+
+defg = abc
+
+abc = abc + 1
+
+print(defg)
+
+
+defg = defg + 1
+
+print(defg)
 
 
 
@@ -128,18 +142,39 @@ print('----------------- SET PLAYING ----------------')
 
 set1 = set(range(20))
 set2 = set(['Talkers:','Luma','Ariel'])
-#set3 = 
+set3 = set()
+set4 = set(set())
+set5 = set1
+set6 = set(set())
 
-people = set(['Peter','Barbara','Sasha','Duncan'])
-natnum = set(range(50))
+people1 = set(['Peter','Barbara','Sasha','Duncan'])
+natnum = set(range(30))
 listset = set(list1)
 
-if people.issubset(natnum):
+if people1.issubset(natnum):
     print('not a subset')
 
 print(natnum)
 
 print(listset)
+
+
+set1.add("SUP")
+print(set1)
+
+
+if (set5 == set1):
+    print('It has changed!')
+
+if (set4 == set6):
+    print('Same set with equals')
+
+if (set4 is set6):
+    print('Same set with is')
+
+print(set1,set4)
+
+
 
 
 
@@ -161,5 +196,20 @@ tuple1 = (1,3,65,543)
 print('----------------- DICTIONARY PLAYING ----------------')
 
 dict1 = {'Mon': 1, 'day': 2}
+dict2 = {}
+dict3 = {'red','green','blue'}
+
+people1 = {'Peter','Barbara','Sasha','Duncan'}
+
+
+print('----------------- LITTLE LAMBDA CALCULUS PLAYING ----------------')
+
+v = lambda u,a,t : u + a*t
+print(v(0,3e5,100))
+
+
+
+
+print('----------------- COMBINED DATA TYPE PLAYING ----------------')
 
 
