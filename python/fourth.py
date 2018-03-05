@@ -132,6 +132,10 @@ set3 = set()
 set4 = set(set())
 set5 = set1
 set6 = set(set())
+set7 = set2.copy()
+
+setdiff1 = set(['Peter','will','love','me'])
+setdiff2 = set(['Peter','will','always','cherish','me'])
 
 people1 = set(['Peter','Barbara','Sasha','Duncan'])
 natnum = set(range(30))
@@ -145,12 +149,30 @@ print(natnum)
 print(listset)
 
 
+print('---------- SET OPERATIONS ----------')
+
+
 set1.add("SUP")
 print(set1)
 
 
+set2.clear()
+print(set2)
+
+
+print(set7)
+
+print( setdiff1.difference(setdiff2) )
+
+print( setdiff1.intersection(setdiff2) )
+
+
+
+
+print('------------ CONDITIONAL SET STUFF  ------------------')
+
 if (set5 == set1):
-    print('It has changed!')
+    print('It Dynamically Alters!')
 
 if (set4 == set6):
     print('Same set with equals')
