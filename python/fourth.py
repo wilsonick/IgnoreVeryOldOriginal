@@ -86,20 +86,6 @@ print(numfloat + 2 / numint + numint2 - 43)
 
 
 
-print('----------------- BASIC CS PLAYING ----------------')
-
-abc = 1
-
-defg = abc
-
-abc = abc + 1
-
-print(defg)
-
-
-defg = defg + 1
-
-print(defg)
 
 
 
@@ -206,6 +192,24 @@ print('----------------- LITTLE LAMBDA CALCULUS PLAYING ----------------')
 
 v = lambda u,a,t : u + a*t
 print(v(0,3e5,100))
+
+
+
+
+print('----------------- BASIC CS PLAYING ----------------')
+
+abc = 1
+
+defg = abc
+
+abc = abc + 1
+
+print(defg)
+
+
+defg = defg + 1
+
+print(defg)
 
 
 
