@@ -1,3 +1,4 @@
+
 import math
 
 
@@ -12,6 +13,8 @@ bools2 = True
 if bools1:
     print('boolean')
 
+# Logical operations
+
 def nand(bool1,bool2):
     return not (bool1 and bool2)
 
@@ -25,7 +28,7 @@ print(nand(bools1,bools2))
 
 print('----------------- NUMBER PLAYING ----------------')
 
-#Positives
+# Positives
 
 numint = 10
 numlong = 3685974589764576458976457
@@ -38,7 +41,7 @@ numsci = 97439e12
 
 print(numint,numlong,numfloat,numfloat2,numcomp,numexp1,numexp2,numsci)
 
-#Negatives
+# Negatives
 
 nnumint = -10
 nnumlong = -3685974589764576458976457
@@ -65,6 +68,15 @@ print(--numint)
 print(-------numint)
 
 
+# Floor detection
+
+def floorsame(x,y):
+    if (x / y == x // y):
+        return [True, x/y]
+    else:
+        return [False, x/y]
+
+print('The answer to floorsame is', floorsame(8,2))
 
 
 # Various arithmetic using a single variable. 
@@ -76,7 +88,7 @@ print(numint % 3)
 print(numint % numint)
 
 
-# Implicit definition
+# Implicit definition. 
 
 numint2 = numint + 1
 
@@ -91,13 +103,17 @@ print(numfloat + 2 / numint + numint2 - 43)
 
 print('----------------- STRING PLAYING ----------------')
 
-string1 = 'Now is the time for 111 @@@ *&$(^$#*(#@&$(@#& 0123456789 '
-string2 = 'Yes Ariel? What is Nic doing?'
+string1 = 'Now is the time for all good men to come to the aid of the party. '
+string2 = 'Yes Ariel. What is Nic doing?'
 string3 = 'Umm... I "dunno". '
 string4 = 'He\'s doing other stuff'
+string5 = ' 111 @@@ *&$(^$#*(#@&$(@#& 0123456789 '
+string6 = '||| -- Start and end -- |||'
 binarynum = '01010011'
 binarynum2 = '00101100'
 hexnum = '0xff'
+
+# Find the lengths of various strings. 
 
 print(int(binarynum,2))
 print(int(binarynum2,2))
@@ -105,12 +121,23 @@ print(int(hexnum,16))
 print(int('1f',16))
 print(int('0x1f',16))
 
+# Print, slice and so forth. 
+
 print(string4)
 print(string1[1:5])
 print(string1[10:])
 print(string1*2)
-print(string3*len(string3))
-print(string3*(len(string3) - 4))
+print(string3*(len(string3) - 10))
+print(string3*(len(string3) - 10))
+
+print(string3*2)  # Pre and post multilying of stings is identical!!!11 
+print(2*string3)
+
+print(string1 + string2 + '\n' + 2*(string1 + string2))
+
+print(string1 + string2 + '\n' + 2*(string1 + string2)*2)
+
+
 
 
 print('----------------- LIST PLAYING ----------------')
@@ -121,7 +148,7 @@ list3 = [[]] * 5
 list4 = [] + []
 print(list1*3)
 
-print([numint,numint])
+print([numint,numint]) # Number variable usage for lists. 
 
 
 print('----------------- SET PLAYING ----------------')
@@ -131,7 +158,7 @@ set2 = set(['Talkers:','Luma','Ariel'])
 set3 = set()
 set4 = set(set())
 set5 = set1
-set6 = set(set())
+set6 = set(['Steve','Mark','Peter'])
 set7 = set2.copy()
 
 setdiff1 = set(['Peter','will','love','me'])
@@ -141,32 +168,49 @@ people1 = set(['Peter','Barbara','Sasha','Duncan'])
 natnum = set(range(30))
 listset = set(list1)
 
+
+
+# Using set operations and conditions
+
+if people1.issubset(people1):
+    print('proper or not proper?')   # All are subsets of themselves. 
+
 if people1.issubset(natnum):
-    print('not a subset')
+    print('not a subset')  # Completely different sets are not subsets. 
 
+if setdiff1 <= setdiff1:      # Not proper subset!
+    print('Not proper subset?')
+
+
+
+
+
+
+# Print a few sets. 
 print(natnum)
-
 print(listset)
 
 
 print('---------- SET OPERATIONS ----------')
 
 
-set1.add("SUP")
+set1.add("SUP") # Will print first 20 with sup at end
 print(set1)
 
 
-set2.clear()
+set2.clear()  # Will print out the empty set since cleared. 
 print(set2)
 
 
-print(set7)
+print(set7) # OMG PRINTED OUT AS A DICTIONARY WHEN COPIED!!
 
-print( setdiff1.difference(setdiff2) )
+print( setdiff1.difference(setdiff2) )  # Set difference one way
+print( setdiff2.difference(setdiff1) ) # Set difference the other way
 
-print( setdiff1.intersection(setdiff2) )
+print( setdiff1.intersection(setdiff2) )  # What is shared in common between the sets? 
+print(setdiff1 & setdiff2)
 
-
+print( set6.issubset(set5) )
 
 
 print('------------ CONDITIONAL SET STUFF  ------------------')
@@ -174,11 +218,13 @@ print('------------ CONDITIONAL SET STUFF  ------------------')
 if (set5 == set1):
     print('It Dynamically Alters!')
 
+'''
 if (set4 == set6):
     print('Same set with equals')
 
 if (set4 is set6):
     print('Same set with is')
+'''
 
 print(set1,set4)
 
