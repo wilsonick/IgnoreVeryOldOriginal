@@ -112,8 +112,11 @@ string6 = '||| -- Start and end -- |||'
 binarynum = '01010011'
 binarynum2 = '00101100'
 hexnum = '0xff'
+notacomment = '''Hello'''
+usingperc1 = '%s is a string that is used. ' % ('This')
+usingperc2 = '%d is a number that is used. ' % (numint)
 
-# Find the lengths of various strings. 
+# Find the lengths of various strings and do hex and binary. 
 
 print(int(binarynum,2))
 print(int(binarynum2,2))
@@ -130,12 +133,38 @@ print(string1*2)
 print(string3*(len(string3) - 10))
 print(string3*(len(string3) - 10))
 
+# Identity test
+print(string1)
+print(string1[:10] + string1[10:])
+
+# Negative slices. 
+print(string1[-14])
+print('before' + string1[-4:-10] + 'after') # Wrong way around! New Compiler addition! 
+print('before' + string1[-5:-5] + 'after') #Empty slice
+print(string1[-10:-4])
+print(string1[-5:])
+print(string1[:-5])
+
+
 print(string3*2)  # Pre and post multilying of stings is identical!!!11 
 print(2*string3)
 
 print(string1 + string2 + '\n' + 2*(string1 + string2))
 
 print(string1 + string2 + '\n' + 2*(string1 + string2)*2)
+
+print(usingperc1)
+print(usingperc2)
+
+
+if string1 != string2:
+    print('Distinct strings!')
+
+
+for i in 'hello':
+    print(i)
+    for j in 'hel':
+        print('sup')
 
 
 
@@ -146,6 +175,7 @@ list1 = [1,'N','I','C',2]
 list2 = []*10
 list3 = [[]] * 5
 list4 = [] + []
+list1 = [1,'N','I','C',2]*4
 print(list1*3)
 
 print([numint,numint]) # Number variable usage for lists. 
@@ -180,9 +210,6 @@ if people1.issubset(natnum):
 
 if setdiff1 <= setdiff1:      # Not proper subset!
     print('Not proper subset?')
-
-
-
 
 
 
