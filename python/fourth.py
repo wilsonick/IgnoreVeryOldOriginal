@@ -1,7 +1,6 @@
 
 import math
 
-
 #################  DATA TYPE PLAYING  ################
 print('----------------- DATA TYPE PLAYING -----------------------')
 
@@ -68,6 +67,16 @@ print(--numint)
 print(-------numint)
 
 
+# If two are different, 
+
+if numexp1 == numexp2:
+    print('pow does nothing different with not is')
+
+if numexp1 is numexp2:
+    print('pow does nothing different with is')
+
+
+
 # Floor detection
 
 def floorsame(x,y):
@@ -96,6 +105,12 @@ print(numint2)
 
 print(numfloat + 2 / numint + numint2 - 43)
 
+# It changes the type when combined so it is the most general
+
+print(numint + numfloat)   # Returns a float
+print(numint * numcomp)  # Returns a complex number
+print(numint + numsci) # Returns ten more than a massive number
+#print(
 
 
 
@@ -109,6 +124,9 @@ string3 = 'Umm... I "dunno". '
 string4 = 'He\'s doing other stuff'
 string5 = ' 111 @@@ *&$(^$#*(#@&$(@#& 0123456789 '
 string6 = '||| -- Start and end -- |||'
+string7 = 'hello\b\b'
+string8 = '\\ Prog \'hello\' \" hello \"'
+string9 = 'Nic was like: FUCK OFF FUCK OFF FUCK OFF'
 binarynum = '01010011'
 binarynum2 = '00101100'
 hexnum = '0xff'
@@ -156,15 +174,24 @@ print(string1 + string2 + '\n' + 2*(string1 + string2)*2)
 print(usingperc1)
 print(usingperc2)
 
+print(string7)
+print(string8)
+print(string9)
+
+print(string2.upper())
+print(bin(3).upper())
+print(string1.replace('Now','Immediately'))
+print('hello'.upper())
+
 
 if string1 != string2:
     print('Distinct strings!')
 
 
-for i in 'hello':
+for i in 'halo':
     print(i)
-    for j in 'hel':
-        print('sup')
+    for j in 'hal':
+        print('yo')
 
 
 
@@ -179,6 +206,9 @@ list1 = [1,'N','I','C',2]*4
 print(list1*3)
 
 print([numint,numint]) # Number variable usage for lists. 
+
+print([1,2,3] + [1,2])
+
 
 
 print('----------------- SET PLAYING ----------------')
