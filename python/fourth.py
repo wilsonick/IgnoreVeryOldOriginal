@@ -25,6 +25,8 @@ def xor(bool1,bool2):
 
 print(nand(bools1,bools2))
 
+print(True + False + True + False - False - True)
+
 print('----------------- NUMBER PLAYING ----------------')
 
 # Positives
@@ -36,6 +38,7 @@ numfloat2 = 123453.0
 numcomp = 5 + 4j
 numexp1 = 4**10
 numexp2 = pow(4,10)
+numexp3 = 4**4.5
 numsci = 97439e12
 
 print(numint,numlong,numfloat,numfloat2,numcomp,numexp1,numexp2,numsci)
@@ -108,12 +111,44 @@ print(numfloat + 2 / numint + numint2 - 43)
 # It changes the type when combined so it is the most general
 
 print(numint + numfloat)   # Returns a float
+print(numint + numfloat2)   # Returns a float
 print(numint * numcomp)  # Returns a complex number
+print(numsci * numcomp) # Returns a complex number
 print(numint + numsci) # Returns ten more than a massive number
-#print(
 
 
+print(numfloat > 3)
+print( (numint > 3) or (numint < 3) )
+print(10 & 4)
 
+
+# Print out 3 times the powers of 2
+shift = 3
+for i in range(7):
+    print(shift<<i)
+
+
+sup = 2
+sup /= 3
+
+print(sup)
+
+sup *= 4
+
+print(sup)
+
+del sup
+
+
+numval1 = 5
+numval2 = 6
+print(numval1 ** numval2)
+
+numval1 **= numval2
+print(numval1)
+
+numb = 6
+print(numb.bit_length())
 
 
 print('----------------- STRING PLAYING ----------------')
@@ -127,6 +162,7 @@ string6 = '||| -- Start and end -- |||'
 string7 = 'hello\b\b'
 string8 = '\\ Prog \'hello\' \" hello \"'
 string9 = 'Nic was like: FUCK OFF FUCK OFF FUCK OFF'
+string10 = 'Peter is a good person. ' * 5
 binarynum = '01010011'
 binarynum2 = '00101100'
 hexnum = '0xff'
@@ -177,11 +213,17 @@ print(usingperc2)
 print(string7)
 print(string8)
 print(string9)
+print(string10)
+print(5 * string10)
 
 print(string2.upper())
 print(bin(3).upper())
 print(string1.replace('Now','Immediately'))
 print('hello'.upper())
+print(string1.find('time') + 1)
+print('time'.find('time'))
+
+
 
 
 if string1 != string2:
@@ -209,7 +251,8 @@ print([numint,numint]) # Number variable usage for lists.
 
 print([1,2,3] + [1,2])
 
-
+print('N' in list1)
+print('K' in list1)
 
 print('----------------- SET PLAYING ----------------')
 
