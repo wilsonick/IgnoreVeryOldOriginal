@@ -150,6 +150,10 @@ print(numval1)
 numb = 6
 print(numb.bit_length())
 
+print(1.4.is_integer())
+
+print(340.903.hex())
+
 
 print('----------------- STRING PLAYING ----------------')
 
@@ -244,8 +248,26 @@ list1 = [1,'N','I','C',2]
 list2 = []*10
 list3 = [[]] * 5
 list4 = [] + []
-list1 = [1,'N','I','C',2]*4
+list5 = [1,'N','I','C',2]*4
+list6 = ['E','l','l','i','e']
+list7 = ['Jules','Ellie','Peter']
+list8 = [1,2,4,8,16,32]
+list9 = list8
+list10 = ['Jules',5,'Barbara',10,'Peter',15]
+list11 = [[1,2,3],[4,5,6],[7,8,9]]
+
+
 print(list1*3)
+
+print(list3)
+
+print(list11)
+
+print(list11[1][1])
+
+print(2*list8)
+
+print(2*list7*2)
 
 print([numint,numint]) # Number variable usage for lists. 
 
@@ -253,6 +275,22 @@ print([1,2,3] + [1,2])
 
 print('N' in list1)
 print('K' in list1)
+
+for i in range(len(list8)):
+    list8[i] = pow(list8[i],2)
+print(list8)
+
+
+print([i**2 for i in list9])
+
+list11.reverse()
+print(list11)
+
+list11.append([3,12,13])
+print(list11)
+
+
+
 
 print('----------------- SET PLAYING ----------------')
 
