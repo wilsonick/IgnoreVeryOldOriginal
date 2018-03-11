@@ -263,6 +263,13 @@ matrix1 = [
     [0,0,1,0],
     [0,0,0,1],]
 
+matrix2 = [
+    [1,2,3,4],
+    [5,6,7,8],
+    [9,10,11,12],
+    [13,14,15,16],]
+
+
 
 print(list1*3)
 
@@ -321,7 +328,13 @@ print(matrix1[3][:].append(1)) # Another use of the compiler addition. I definit
 
 print(matrix1)
 
+print(matrix2)
 
+del matrix1[1][:]
+
+print(matrix1)
+
+print(matrix2[1:2][1:2])
 
 
 
