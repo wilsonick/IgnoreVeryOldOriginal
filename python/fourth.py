@@ -245,7 +245,7 @@ for i in 'halo':
 print('----------------- LIST PLAYING ----------------')
 
 list1 = [1,'N','I','C',2]
-list2 = []*10
+list2 = []
 list3 = [[]] * 5
 list4 = [] + []
 list5 = [1,'N','I','C',2]*4
@@ -255,6 +255,13 @@ list8 = [1,2,4,8,16,32]
 list9 = list8
 list10 = ['Jules',5,'Barbara',10,'Peter',15]
 list11 = [[1,2,3],[4,5,6],[7,8,9]]
+list12 = []*10
+
+matrix1 = [
+    [1,0,0,0],
+    [0,1,0,0],
+    [0,0,1,0],
+    [0,0,0,1],]
 
 
 print(list1*3)
@@ -288,6 +295,33 @@ print(list11)
 
 list11.append([3,12,13])
 print(list11)
+
+print([1,2,3].reverse()) # Another compiler addition. Should I stop?
+
+
+# Generate a list of tuples. 
+
+emptylist1 = []
+for i in [1,2,3]:
+    for j in [3,1,4]:
+        if i != j:
+            emptylist1.append((i,j))
+
+print(emptylist1)
+
+
+print(matrix1)
+print(matrix1[2][2])
+
+del matrix1[3][2]
+
+print(matrix1)
+
+print(matrix1[3][:].append(1)) # Another use of the compiler addition. I definitely should stop! 
+
+print(matrix1)
+
+
 
 
 
