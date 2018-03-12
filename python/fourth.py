@@ -257,6 +257,7 @@ list10 = ['Jules',5,'Barbara',10,'Peter',15]
 list11 = [[1,2,3],[4,5,6],[7,8,9]]
 list12 = []*10
 
+
 matrix1 = [
     [1,0,0,0],
     [0,1,0,0],
@@ -308,14 +309,15 @@ print([1,2,3].reverse()) # Another compiler addition. Should I stop?
 
 # Generate a list of tuples. 
 
-emptylist1 = []
+tuplelist1 = []
 for i in [1,2,3]:
     for j in [3,1,4]:
         if i != j:
-            emptylist1.append((i,j))
+            tuplelist1.append([i,j])
 
-print(emptylist1)
+print(tuplelist1)
 
+print('----------------- MATRIX PLAYING ----------------')
 
 print(matrix1)
 print(matrix1[2][2])
@@ -327,14 +329,54 @@ print(matrix1)
 print(matrix1[3][:].append(1)) # Another use of the compiler addition. I definitely should stop! 
 
 print(matrix1)
-
 print(matrix2)
 
 del matrix1[1][:]
 
 print(matrix1)
 
-print(matrix2[1:2][1:2])
+
+print(matrix2[1][0:2])  # Another compiler error in that multi-dimensional matrix slicing doesn't work! STOP NOW! 
+
+print(matrix2[0:2][0:1])
+
+
+# Make a triangle in ASCII with Python!
+
+listtest1 = []
+for i in range(10):
+    listtest1.append(i)
+    print(listtest1)
+
+for i in range(10):
+    listtest1.remove(i)
+    print(listtest1)
+
+
+
+'''
+# Definitely won't compile! 
+
+listtest1 = []
+for i in range(10):
+    for j in range(10):
+        listtest1.append(i)
+        print(listtest1)
+        listtest1.remove(j)
+        print(listtest1)
+'''
+
+'''
+# Doesn't give triangle!
+
+listtest1 = []
+for i in range(10):
+    listtest1.append(i)
+    print(listtest1)
+    listtest1.remove(i)
+    print(listtest1)
+'''
+
 
 
 
@@ -453,17 +495,31 @@ print('----------------- BASIC CS PLAYING ----------------')
 
 abc = 1
 
+# print(defg)
+print(abc)
+
+print('-------')
+
 defg = abc
 
-abc = abc + 1
+print(defg)
+print(abc)
+
+print('-------')
+
+abc += 1
 
 print(defg)
+print(abc)
 
+print('-------')
 
-defg = defg + 1
+defg += 1
 
 print(defg)
+print(abc)
 
+print('-------')
 
 
 
