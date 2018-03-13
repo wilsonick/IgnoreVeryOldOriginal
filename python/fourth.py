@@ -256,7 +256,7 @@ list9 = list8
 list10 = ['Jules',5,'Barbara',10,'Peter',15]
 list11 = [[1,2,3],[4,5,6],[7,8,9]]
 list12 = []*10
-
+list13 = list10[1]
 
 matrix1 = [
     [1,0,0,0],
@@ -317,6 +317,8 @@ for i in [1,2,3]:
 
 print(tuplelist1)
 
+print(list13)
+
 print('----------------- MATRIX PLAYING ----------------')
 
 print(matrix1)
@@ -376,6 +378,77 @@ for i in range(10):
     listtest1.remove(i)
     print(listtest1)
 '''
+
+# Goal: Separate list10 based on data type. 
+list10string = [x for x in list10 if isinstance(x, int)]
+
+list10number = [x for x in list10 if isinstance(x, str)]
+
+print(list10)
+print(list10string, list10number)
+
+# Goal: Create a list that has numbers and strings mixed in.
+listnums = list(range(20))
+liststrings = 'abcdefghijklmnopqrst'
+
+listboth = []
+
+for i in range(len(listnums)):
+    listboth.append(listnums[i])
+    listboth.append(liststrings[i])
+
+print(listboth)
+
+# Goal: make a list of tuples that contains y=x as naturals
+listline = []
+
+for i in list(range(50)):
+    for j in list(range(50)):
+        if (i == j):
+            listline.append((i,j))
+
+print(listline)
+
+
+
+
+print('------------- BASIC CS LIST PLAYING -------------')
+
+# See if lists can be altered individually or both when linked. 
+
+origlist1 = []
+newlist1 = origlist1
+
+newlist1.append(2)
+
+print(newlist1)
+print(origlist1)
+
+origlist1.append(3)
+
+print(newlist1)
+print(origlist1)
+
+# Gives '2' and clearly alters both changing both at the same time. 
+
+origlist2 = []
+newlist2 = origlist2[:]
+
+newlist2.append(2)
+
+print(newlist2)
+print(origlist2)
+
+origlist2.append(3)
+
+print(newlist2)
+print(origlist2)
+
+# Gives two but both are independent of each other, and hence orig does not change. 
+
+# Kinda like a pointer, but with variables rather than addresses.
+
+
 
 
 
@@ -463,10 +536,12 @@ print(set1,set4)
 print('----------------- TUPLE PLAYING ----------------')
 
 tuple1 = (1,3,65,543)
+tuple2 = 483,85,3888,'sup'
+tuple3 = ((1,0,0),(0,1,0),(0,0,1))
+tuple4 = tuple3, 'Basis vectors'
 
 
-
-
+print(tuple1,tuple2,tuple3,tuple4)
 
 
 
