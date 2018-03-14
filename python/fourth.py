@@ -411,6 +411,29 @@ print(listline)
 
 
 
+print(list6[3:]); print(list6[:3])
+
+# Verify that the identity of lists holds for slicing. 
+for i in range(len(list10)):
+    print(list10[:i] + list10[i:])
+
+'''
+def compare(a,b):
+    return cmp(int(a), int(b))
+
+list8.sort(compare)
+'''
+
+'''
+def reversal(a,b):
+    if a > b:
+        return b
+
+list8.sort(reversal)
+
+print(list8)
+'''
+
 
 print('------------- BASIC CS LIST PLAYING -------------')
 
@@ -544,7 +567,8 @@ tuple4 = tuple3, 'Basis vectors'
 print(tuple1,tuple2,tuple3,tuple4)
 
 
-
+for i,j in ((1,2),(2,3)):
+    print(i,j)
 
 
 
