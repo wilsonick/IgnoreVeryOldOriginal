@@ -1,3 +1,6 @@
+import random
+import matplotlib.pyplot as pIt
+
 print('----------------- COMBINED DATA TYPE PLAYING ----------------')
 
 # Strings of numbers
@@ -37,7 +40,22 @@ for i in range(len(liststrnum1)):
         print('These are numbers:',liststrnum1[i])
 
 # List of tuples
+listtuple1 = [(1,2),(3,4)]
+listtuple2 = [(1,2,3),(4,5,6)]
+listtuple3 = [((10,11,12),(13,14,15))]
+listtuplepoints1 = [(0,0),(1,1),(2,2),(3,3),(4,4),(5,5)]
 
+listtuplepoints2 = []
+for i in range(4):
+    listtuplepoints2.append( (random.randint(1,10) , random.randint(1,10) ) )
+
+print(listtuple1,listtuple2,listtuple3,listtuplepoints1,listtuplepoints1[0],listtuplepoints1[1],listtuplepoints2)
+
+
+# Plot random numbers using a package
+
+pIt.plot(listtuplepoints1)
+pIt.show()
 
 
 # Sets of strings and numbers
